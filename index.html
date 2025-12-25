@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ZPRINT File Naming v2.4</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h2>ZPRINT – Work Order Generator</h2>
+<form id="woForm">
+<label>Category</label><select id="category" required></select>
+<label>Subcategory</label><select id="subcategory" required></select>
+<label>Client Name</label><input type="text" id="client" required>
+<label>Client Phone</label>
+<input list="phoneList" id="phone" required><datalist id="phoneList"></datalist>
+<label>Description</label><input type="text" id="description" required>
+<label>Version</label><input type="text" id="version" value="v1" required>
+<button type="submit">Generate</button>
+</form>
+<div id="result" hidden>
+<p><strong>Filename:</strong></p>
+<input type="text" id="filename" readonly>
+<button onclick="copyFilename()">COPY</button>
+<p><a id="labelLink" target="_blank">Download Job Card Label</a></p>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
